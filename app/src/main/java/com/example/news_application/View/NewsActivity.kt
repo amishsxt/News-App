@@ -2,11 +2,11 @@ package com.example.news_application.View
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.news_application.Model.DataModel.News
 import com.example.news_application.R
 import com.example.news_application.databinding.ActivityNewsBinding

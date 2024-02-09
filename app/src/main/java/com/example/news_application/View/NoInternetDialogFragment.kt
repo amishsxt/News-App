@@ -1,12 +1,9 @@
 package com.example.news_application.View
 
-import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.news_application.R
 import com.google.android.material.button.MaterialButton
