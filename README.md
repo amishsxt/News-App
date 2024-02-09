@@ -4,7 +4,7 @@ A lightning-fast, lightweight news app for instant headlines. With a clean inter
 
 ## Features
 
-- Get real-time news with SwiftNews for instant access to the latest headlines.
+- Get real-time news with this app for instant access to the latest headlines.
 - Offers a clean and intuitive design for a seamless reading experience.
 - Enjoy a lightweight app that loads quickly, ensuring a smooth and efficient news browsing experience.
 
