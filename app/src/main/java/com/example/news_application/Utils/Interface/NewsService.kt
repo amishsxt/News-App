@@ -9,7 +9,7 @@ interface NewsApiService {
 
     @GET("everything")
     suspend fun getNews(
-        @Query("domains") domains: String,
+        @Query("sources") sources: String,
         @Query("apiKey") apiKey: String,
         @Query("page") page: Int
     ): Response<NewsResponse>

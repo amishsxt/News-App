@@ -15,7 +15,7 @@ class NewsViewModel @Inject constructor(private val newsRepo: NewsRepo) : ViewMo
 
     val newsFlow: Flow<PagingData<News>> = Pager(
         config = PagingConfig(pageSize = 20, enablePlaceholders = false),
-        pagingSourceFactory = { newsRepo.getNewsPagingSource("wsj.com", "01c59c66f2e845b9aa827924950d4f90") }
+        pagingSourceFactory = { newsRepo.getNewsPagingSource("techcrunch", "01c59c66f2e845b9aa827924950d4f90") }
     ).flow
 
 }

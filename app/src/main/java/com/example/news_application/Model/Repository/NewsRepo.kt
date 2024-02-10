@@ -9,12 +9,12 @@ import javax.inject.Inject
 
 class NewsRepo @Inject constructor(private val apiService: NewsApiService) {
 
-    fun getNewsPagingSource(domains: String, apiKey: String): PagingSource<Int, News> {
+    fun getNewsPagingSource(sources: String, apiKey: String): PagingSource<Int, News> {
         return object : PagingSource<Int, News>() {
             override suspend fun load(params: LoadParams<Int>): LoadResult<Int, News> {
                 return try {
                     val page = params.key ?: 1
-                    val response = apiService.getNews(domains, apiKey, page)
+                    val response = apiService.getNews(sources, apiKey, page)
                     if (response.isSuccessful) {
                         val newsList = response.body()?.articles ?: emptyList()
                         Log.d("NewsRepo", "Number of items loaded: ${newsList.size}")
