@@ -29,15 +29,13 @@ class HomeActivity : AppCompatActivity(), NewsAdapter.NewsAdapterListener {
         xml = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(xml.root)
 
-        showProgressBar()
+//        showProgressBar()
 
         // Initialize ViewModel and Adapter
-        viewModel = ViewModelProvider(this).get(NewsViewModel::class.java)
+        viewModel = ViewModelProvider(this)[NewsViewModel::class.java]
         adapter = NewsAdapter(this)
 
         setAdapter()
-
-        viewModel = ViewModelProvider(this).get(NewsViewModel::class.java)
 
         // Observe the paging data from the ViewModel
         lifecycleScope.launch {
@@ -53,7 +51,7 @@ class HomeActivity : AppCompatActivity(), NewsAdapter.NewsAdapterListener {
         xml.recyclerView.adapter = adapter
         xml.recyclerView.layoutManager = LinearLayoutManager(this)
 
-        hideProgressBar()
+//        hideProgressBar()
     }
 
     override fun onNewsItemClick(newsItem: News) {
